@@ -43,7 +43,7 @@ const controlRecipes = async function () {
     //     This is one async funtion calling another async function
     // loadRecipe() does not return anything
     await model.loadRecipe(id);
-    // console.log(model.state.bookmarks);
+    console.log(model.state.bookmarks);
 
     // 4 - Rendering recipe
     recipeView.render(model.state.recipe);
@@ -152,7 +152,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('Welcome');
 };
 
 init();
